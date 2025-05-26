@@ -1,0 +1,7 @@
+Indicador,Valor Analítico,Valor Simulado
+Prob_bloqueio_classe_1,0.0065,0.0066
+Prob_bloqueio_classe_2,0.0235,0.0235
+Utilizacao_media,0.2497,0.2496
+Media_conexoes_classe_1,0.6623,0.6609
+Media_conexoes_classe_2,0.5859,0.5871
+Fracao_tempo_capacidade_maxima,0.0065,0.0066
