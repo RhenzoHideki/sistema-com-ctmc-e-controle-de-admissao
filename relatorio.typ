@@ -50,6 +50,16 @@ Para validar o modelo analítico, foi realizada uma simulação estocástica com
 
 #pagebreak()
 = Resultados
+== Tabela Matriz Infinitesimal
+#let q = csv("matriz_infinitesimal_Q_truncada.csv")
+#table(
+  columns: 19,
+  inset: 5pt,
+
+  align: center,
+  ..q.flatten()
+)
+
 == Comparação da Distribuição Estacionária
 
 #let tabela = csv("tabela.csv")
@@ -58,7 +68,12 @@ Para validar o modelo analítico, foi realizada uma simulação estocástica com
   columns: 3,
   ..tabela.flatten()
 )
-
+#figure(
+  image("Figure_3.png",  width: 120%
+),
+  caption: "Comparação entre a distribuição estacionária analítica e a empírica obtida pela simulação.",
+)
+#pagebreak()
 == Indicadores de Desempenho
 #let tabela2 = csv("tabela2.csv")
 #table(

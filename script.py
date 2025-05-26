@@ -35,6 +35,12 @@ for i, (n1, n2) in enumerate(states):
         Qm[i, states.index((n1, n2-1))] = n2 * mu2
     Qm[i, i] = -Qm[i].sum()
 
+# Truncar para 2 casas decimais
+df_Q = pd.DataFrame(Qm, index=states, columns=states)
+df_Q_trunc = np.trunc(df_Q * 100) / 100
+tools.display_dataframe_to_user("Matriz Infinitesimal Q (truncada)", df_Q_trunc)
+
+
 # --- 2. Solução Analítica ---
 A = Qm.T.copy()
 A[-1, :] = 1
